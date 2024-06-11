@@ -1,0 +1,141 @@
+/**
+ * This is a general styling sheet.
+ * It should be used for customizations that affect multiple pages.
+ *
+ * This file is compiled into styles/custom.css by sphinxcontrib.sass, see:
+ * https://sass-lang.com/guide/
+ */
+/* Global */
+code.literal {
+  border: 0; }
+
+/* Version switcher */
+.version-switcher__menu a.list-group-item.sk-avail-docs-link {
+  display: flex;
+  align-items: center; }
+  .version-switcher__menu a.list-group-item.sk-avail-docs-link:after {
+    content: var(--pst-icon-external-link);
+    font: var(--fa-font-solid);
+    font-size: 0.75rem;
+    margin-left: 0.5rem; }
+
+/* Primary sidebar */
+.bd-sidebar-primary {
+  width: 22.5%;
+  min-width: 16rem; }
+  .bd-sidebar-primary button.version-switcher__button {
+    margin-bottom: unset;
+    margin-left: 0.3rem;
+    font-size: 1rem; }
+  .bd-sidebar-primary nav.bd-links {
+    margin-right: -0.5rem; }
+
+/* Article content */
+.bd-article h1 {
+  font-weight: 500;
+  margin-bottom: 2rem; }
+
+.bd-article h2 {
+  font-weight: 500;
+  margin-bottom: 1.5rem; }
+
+.bd-article img {
+  height: unset !important;
+  padding: 1%; }
+
+.bd-article li.toctree-l1 {
+  padding-bottom: 0.5em; }
+  .bd-article li.toctree-l1 > a {
+    font-size: 150%;
+    font-weight: bold; }
+
+.bd-article li.toctree-l2,
+.bd-article li.toctree-l3,
+.bd-article li.toctree-l4 {
+  margin-left: 15px; }
+
+/* Dropdowns (sphinx-design) */
+details.sd-dropdown:hover > summary.sd-summary-title > a.headerlink {
+  visibility: visible; }
+
+details.sd-dropdown > summary.sd-summary-title > a.headerlink {
+  font-size: 1rem; }
+
+details.sd-dropdown > summary.sd-summary-title > button.sk-toggle-all {
+  color: var(--pst-sd-dropdown-color);
+  top: 0.9rem !important;
+  right: 3rem !important;
+  pointer-events: auto !important;
+  display: none;
+  border: none;
+  background: transparent; }
+
+details.sd-dropdown[open] > summary.sd-summary-title:hover > .sd-summary-up.sk-toggle-all, details.sd-dropdown:not([open]) > summary.sd-summary-title:hover
+> .sd-summary-down.sk-toggle-all {
+  display: block; }
+
+/* scikit-learn buttons */
+a.btn.sk-btn-orange {
+  background-color: var(--sk-orange-tint-1);
+  color: black !important; }
+  a.btn.sk-btn-orange:hover {
+    background-color: var(--sk-orange-tint-3); }
+
+a.btn.sk-btn-cyan {
+  background-color: var(--sk-cyan-shades-2);
+  color: white !important; }
+  a.btn.sk-btn-cyan:hover {
+    background-color: var(--sk-cyan-shades-1); }
+
+/* scikit-learn avatar grid, see build_tools/generate_authors_table.py */
+div.sk-authors-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  div.sk-authors-container > div {
+    width: 6rem;
+    margin: 0.5rem;
+    font-size: 0.9rem; }
+
+/* scikit-learn text-image grid, used in testimonials and sponsors pages */
+div.sk-text-image-grid-small {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  div.sk-text-image-grid-small div.text-box,
+  div.sk-text-image-grid-small div.image-box {
+    width: 50%; }
+    @media screen and (max-width: 500px) {
+      div.sk-text-image-grid-small div.text-box,
+      div.sk-text-image-grid-small div.image-box {
+        width: 100%; } }
+  div.sk-text-image-grid-small div.text-box .annotation {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--pst-color-text-muted); }
+  div.sk-text-image-grid-small div.image-box {
+    text-align: center; }
+    div.sk-text-image-grid-small div.image-box img {
+      max-height: 60px;
+      max-width: 50%; }
+
+div.sk-text-image-grid-large {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap; }
+  div.sk-text-image-grid-large div.text-box,
+  div.sk-text-image-grid-large div.image-box {
+    width: 50%; }
+    @media screen and (max-width: 500px) {
+      div.sk-text-image-grid-large div.text-box,
+      div.sk-text-image-grid-large div.image-box {
+        width: 100%; } }
+  div.sk-text-image-grid-large div.text-box .annotation {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: var(--pst-color-text-muted); }
+  div.sk-text-image-grid-large div.image-box {
+    text-align: center; }
+    div.sk-text-image-grid-large div.image-box img {
+      max-height: 100px;
+      max-width: 50%; }
